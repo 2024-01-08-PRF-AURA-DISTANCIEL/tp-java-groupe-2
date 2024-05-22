@@ -14,7 +14,21 @@ public class Main {
 		List<Attaque> attaquesPlante =  new ArrayList<>() ;
 		attaquesPlante.add(acideMalique);
 		
+		
+		List<Attaque> attaquesAire =  new ArrayList<>() ;
+		attaquesPlante.add(acrobatie);
+		
+		List<Attaque> attaquesInsect =  new ArrayList<>() ;
+		attaquesPlante.add(appelAttaque);
+		
+		List<Attaque> attaquesEAU =  new ArrayList<>() ;
+		attaquesPlante.add(appelAttaque);
+		
 		EspecePokemon saquedeneu = new  EspecePokemon("Saquedeneu",EnumeType.PLANTE,100,attaquesPlante);
+		EspecePokemon airmure = new  EspecePokemon("Airmure",EnumeType.AIRE,100,attaquesPlante);
+		EspecePokemon maskadra = new  EspecePokemon("Maskadra",EnumeType.INSECT,100,attaquesPlante);
+		EspecePokemon tortank = new  EspecePokemon("Tortank",EnumeType.EAU,100,attaquesPlante);
+
 		
 	}
 	
