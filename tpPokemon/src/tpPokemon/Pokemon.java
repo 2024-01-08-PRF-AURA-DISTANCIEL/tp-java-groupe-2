@@ -22,7 +22,7 @@ public class Pokemon {
 	//Constructeur
 
 	public Pokemon(String nom, int niveau, int pointExperience, int pointDeVieMax, EspecePokemon especePokemon) {
-		this.uniqueID = uniqueID;
+		this.uniqueID = UUID.randomUUID();
 		this.nom = nom;
 		this.niveau = niveau;
 		this.pointExperience = pointExperience;
