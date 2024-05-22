@@ -6,11 +6,9 @@ import java.util.List;
 
 public class Main {
 
-<<<<<<< HEAD
-	public static void main(String[] args) {
-=======
+
 	 public static void main(String[] args) {
->>>>>>> f8d7d5ff4d0ec15995bbcba9650619987f866fdd
+
 		Attaque aireDEau = new Attaque("Aire d'eau", EnumeType.EAU, 80);
 		Attaque acideMalique = new Attaque("Acide Malique", EnumeType.PLANTE, 80);
 		Attaque acrobatie  = new Attaque("Acrobatie", EnumeType.AIRE, 55);
