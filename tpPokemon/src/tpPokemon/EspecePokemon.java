@@ -9,14 +9,13 @@ public class EspecePokemon {
 
 	private String nomEspece ;
 	private EnumeType enumeType;
-	int pointDeVieinit ;
+	static int pointDeVieinit ;
 	List<Attaque> attaques  ;
  
 	
 	
 	
 	public EspecePokemon(String nomEspece, EnumeType enumeType, int pointDeVieinit, List<Attaque> attaques) {
-		super();
 		this.nomEspece = nomEspece;
 		this.enumeType = enumeType;
 		this.pointDeVieinit = pointDeVieinit;
@@ -40,7 +39,7 @@ public class EspecePokemon {
 	}
 
 	
-	public int getPointDeVieinit() {
+	public static int getPointDeVieinit() {
 		return pointDeVieinit;
 	}
 

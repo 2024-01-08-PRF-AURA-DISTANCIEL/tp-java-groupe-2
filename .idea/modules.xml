@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/tp-java-groupe-2.iml" filepath="$PROJECT_DIR$/.idea/tp-java-groupe-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tpPokemon/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" filepath="$PROJECT_DIR$/tpPokemon/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tpPokemon/tpPokemon.iml" filepath="$PROJECT_DIR$/tpPokemon/tpPokemon.iml" />
     </modules>
   </component>
 </project>

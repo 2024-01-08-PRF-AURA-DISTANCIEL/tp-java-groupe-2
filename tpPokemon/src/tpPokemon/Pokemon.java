@@ -1,11 +1,12 @@
 package tpPokemon;
 
+import java.util.UUID;
 
 public class Pokemon {
 
 	// TODO Auto-generated constructor stub
 	//Données membres
-	private int id;
+	private UUID uniqueID;
 	private String nom;
 	private int niveau;
 	private int pointExperience;
@@ -17,15 +18,16 @@ public class Pokemon {
 	private Attaque attaque ;
 
 
+
 	//Constructeur
 
-	public Pokemon(int id, String nom, int niveau, int pointExperience, int pointDeVie, int pointDeVieMax, EspecePokemon especePokemon, Attaque attaque) {
-		this.id = id;
+	public Pokemon(String nom, int niveau, int pointExperience, int pointDeVieMax, EspecePokemon especePokemon) {
+		this.uniqueID = uniqueID;
 		this.nom = nom;
 		this.niveau = niveau;
 		this.pointExperience = pointExperience;
 		this.pointDeVie = pointDeVie;
-		this.pointDeVieMax = pointDeVieMax;
+		this.pointDeVieMax = EspecePokemon.getPointDeVieinit();
 		this.especePokemon = especePokemon;
 		this.attaque = attaque;
 	}
@@ -34,12 +36,21 @@ public class Pokemon {
 	//Getters et Setters
 
 
-	public int getId() {
-		return id;
+	public UUID getUniqueID() {
+		return UUID.randomUUID();
+	}
+
+	public String getNom() {
+		return nom;
 	}
 
 	public int getNiveau() {
 		return niveau;
+	}
+
+
+	public int getPointExperience() {
+		return pointExperience;
 	}
 
 	public int getPointDeVie() {
@@ -50,9 +61,12 @@ public class Pokemon {
 		return pointDeVieMax;
 	}
 
-	//Méthodes
-
+	public EspecePokemon getEspecePokemon() {
+		return especePokemon;
+	}
+	public Attaque getAttaque() {
+		return attaque;
+	}
 
 }
 
-}
