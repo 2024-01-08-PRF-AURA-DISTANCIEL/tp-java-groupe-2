@@ -14,12 +14,12 @@ public class EspecePokemon {
  
 	
 	
-	
-	public EspecePokemon() {
-		// TODO Auto-generated constructor stub
-		
-	}
+	//Constructeur
 
+
+	public EspecePokemon(String nomEspece) {
+		this.nomEspece = nomEspece;
+	}
 
 	public String getNomEspece() {
 		return nomEspece;

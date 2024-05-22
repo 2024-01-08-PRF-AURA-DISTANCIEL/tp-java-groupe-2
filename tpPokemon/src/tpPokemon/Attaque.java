@@ -38,5 +38,4 @@ public class Attaque {
 		return "Attaque [nom=" + nom + ", type=" + type + ", pointDeDegat=" + pointDeDegat + "]";
 	}	
 
-
 }

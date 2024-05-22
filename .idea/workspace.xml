@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc41ba0f-9095-4c2b-890a-a77173509a9b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Attaque.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Attaque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/EnumeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/EnumeType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/EspecePokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/EspecePokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
