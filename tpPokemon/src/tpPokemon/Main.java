@@ -17,6 +17,9 @@ public class Main {
 		List<Attaque> attaquesPlante =  new ArrayList<>() ;
 		attaquesPlante.add(acideMalique);
 
+
+
+
 		
 		
 		List<Attaque> attaquesAire =  new ArrayList<>() ;
@@ -27,6 +30,12 @@ public class Main {
 		
 		List<Attaque> attaquesEAU =  new ArrayList<>() ;
 		attaquesPlante.add(appelAttaque);
+
+		 // Affichage de la liste (parcours de chaque élément)
+		 System.out.println("Affichage de la liste : ");
+		 for (Attaque elementDeLaListe : attaquesPlante) {
+			 System.out.println(elementDeLaListe);
+		 }
 		
 		EspecePokemon saquedeneu = new  EspecePokemon("Saquedeneu",EnumeType.PLANTE,100,attaquesPlante);
 		EspecePokemon airmure = new  EspecePokemon("Airmure",EnumeType.AIRE,100,attaquesPlante);
