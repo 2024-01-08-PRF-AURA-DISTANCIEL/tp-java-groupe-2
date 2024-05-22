@@ -50,6 +50,9 @@ public class Pokemon {
 		return pointDeVieMax;
 	}
 
+	//Méthodes
+
+
 }
 
 }
