@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
 
-	public Main() {
+	 public static void main(String[] args) {
 		Attaque aireDEau = new Attaque("Aire d'eau", EnumeType.EAU, 80);
 		Attaque acideMalique = new Attaque("Acide Malique", EnumeType.PLANTE, 80);
 		Attaque acrobatie  = new Attaque("Acrobatie", EnumeType.AIRE, 55);
