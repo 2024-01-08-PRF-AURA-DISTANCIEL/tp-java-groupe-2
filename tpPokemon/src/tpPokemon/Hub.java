@@ -1,8 +1,8 @@
 package tpPokemon;
 
-public class AreneDeCombat {
+public class Hub {
 
-	public AreneDeCombat() {
+	public Hub() {
 		// TODO Auto-generated constructor stub
 	}
 
