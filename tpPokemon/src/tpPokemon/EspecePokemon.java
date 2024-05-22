@@ -10,11 +10,20 @@ public class EspecePokemon {
 	private String nomEspece ;
 	private EnumeType enumeType;
 	int pointDeVieinit ;
-	List<Attaque> attaques = new ArrayList<>();
+	List<Attaque> attaques  ;
  
 	
 	
 	
+	public EspecePokemon(String nomEspece, EnumeType enumeType, int pointDeVieinit, List<Attaque> attaques) {
+		super();
+		this.nomEspece = nomEspece;
+		this.enumeType = enumeType;
+		this.pointDeVieinit = pointDeVieinit;
+		this.attaques = attaques ;
+	}
+
+
 	public EspecePokemon() {
 		// TODO Auto-generated constructor stub
 		
