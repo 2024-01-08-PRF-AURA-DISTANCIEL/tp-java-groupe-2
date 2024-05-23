@@ -83,6 +83,8 @@ Un Pokémon ne peut pas parler plus d'une fois.
 	*
 	* */
 
+
+
 	@Override
 	public String toString() {
 		return "Pokemon{" +
