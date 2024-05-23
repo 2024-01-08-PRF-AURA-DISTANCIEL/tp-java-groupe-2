@@ -11,10 +11,27 @@ public class Main {
 
 	 public static void main(String[] args) {
 
+
 		Attaque aireDEau = new Attaque("Aire d'eau", EnumeType.EAU, 80);
+		Attaque anneauHydro = new Attaque("Anneau Hydro", EnumeType.EAU, 50);
+		Attaque aquaBreche = new Attaque("Aqua-Breche", EnumeType.EAU, 85);
+		Attaque aquaJet = new Attaque("Aqua-Jet", EnumeType.EAU, 40);
+		
 		Attaque acideMalique = new Attaque("Acide Malique", EnumeType.PLANTE, 80);
+		Attaque aireDHerbe = new Attaque("Aire d'Herbe", EnumeType.PLANTE, 80);
+		Attaque aromathérapie = new Attaque("Aromathérapie", EnumeType.PLANTE, 50);
+		Attaque balleGraine = new Attaque("Balle Graine", EnumeType.PLANTE, 25);
+		
 		Attaque acrobatie  = new Attaque("Acrobatie", EnumeType.AIRE, 55);
+		Attaque aéroblast = new Attaque("Aéroblast", EnumeType.AIRE, 100);
+		Attaque aéropique = new Attaque("Aéropique", EnumeType.AIRE, 60);
+		Attaque antiBrume = new Attaque("Anti-Brume", EnumeType.AIRE, 30);
+
 		Attaque appelAttaque = new Attaque("Appel Attaque", EnumeType.INSECT, 90);
+		Attaque appelDéfense = new Attaque("Appel Défense", EnumeType.INSECT, 35);
+		Attaque appelSoins = new Attaque("Appel Soins", EnumeType.INSECT, 65);
+		Attaque boulePollen = new Attaque("Boule Pollen", EnumeType.INSECT, 55);
+
 		
 		List<Attaque> attaquesPlante =  new ArrayList<>() ;
 		attaquesPlante.add(acideMalique);
@@ -116,5 +133,42 @@ public class Main {
 			 default :
 				 System.out.println("Choix incorrect");
          }
+     	System.out.println("Bienvenue dans le monde de Pokémon");
+		listActiviter();
+		int po = scannerClavier.nextInt();	
+		switch (po) {
+		case 1:
+			//listPokemon(listPokemon);
+			break;
+		case 2:
+		//	combat();
+			break;
+		case 3:
+			//discussion(listPokemon);
+			break;
+		case 4:
+		//	promenade(listPokemon);
+			break;
+		default:
+			break;
+		}
+
+
+		scannerClavier.close();
+		
+         
      }
+	 
+		public static void listActiviter() {
+			System.out.println("Tu peux choisir entre ces trois activités.");
+			String[] arrayChoix = new String[4];
+			arrayChoix[0] = "1 Pokémon";
+			arrayChoix[1] = "2 Combat";
+			arrayChoix[2] = "3 Discussion";
+			arrayChoix[3] = "4 Promenade";
+			for (String activiter : arrayChoix) {
+				System.out.println(activiter);
+			}
+		}
 }
+
