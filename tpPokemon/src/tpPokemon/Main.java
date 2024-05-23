@@ -32,36 +32,47 @@ public class Main {
 		Attaque appelSoins = new Attaque("Appel Soins", EnumeType.INSECT, 65);
 		Attaque boulePollen = new Attaque("Boule Pollen", EnumeType.INSECT, 55);
 
+		List<Attaque> attaquesEAU =  new ArrayList<>() ;
+		attaquesEAU.add(aireDEau);
+		attaquesEAU.add(anneauHydro);
+		attaquesEAU.add(aquaBreche);
+		attaquesEAU.add(aquaJet);
+		System.out.println("Affichage de la liste : ");
+	 	for (Attaque elementDeLaListe : attaquesEAU) {
+	 		System.out.println(elementDeLaListe);
+		}
 		
 		List<Attaque> attaquesPlante =  new ArrayList<>() ;
 		attaquesPlante.add(acideMalique);
-		 System.out.println("Affichage de la liste : ");
-		 for (Attaque elementDeLaListe : attaquesPlante) {
+		attaquesPlante.add(aireDHerbe);
+		attaquesPlante.add(aromathérapie);
+		attaquesPlante.add(balleGraine);
+		System.out.println("Affichage de la liste : ");
+		for (Attaque elementDeLaListe : attaquesPlante) {
 			 System.out.println(elementDeLaListe);
-		 }
+		}
 
 
 		List<Attaque> attaquesAire =  new ArrayList<>() ;
 		attaquesAire.add(acrobatie);
-		 System.out.println("Affichage de la liste : ");
-		 for (Attaque elementDeLaListe : attaquesAire) {
+		attaquesAire.add(aéroblast);
+		attaquesAire.add(aéropique);
+		attaquesAire.add(antiBrume);
+		System.out.println("Affichage de la liste : ");
+		for (Attaque elementDeLaListe : attaquesAire) {
 			 System.out.println(elementDeLaListe);
-		 }
+		}
 		
 		List<Attaque> attaquesInsect =  new ArrayList<>() ;
-		 attaquesInsect.add(appelAttaque);
-		 System.out.println("Affichage de la liste : ");
-		 for (Attaque elementDeLaListe : attaquesInsect) {
+		attaquesInsect.add(appelAttaque);
+		attaquesInsect.add(appelDéfense);
+		attaquesInsect.add(appelSoins);
+		attaquesInsect.add(boulePollen);
+		System.out.println("Affichage de la liste : ");
+		for (Attaque elementDeLaListe : attaquesInsect) {
 			 System.out.println(elementDeLaListe);
-		 }
+		}
 		
-		List<Attaque> attaquesEAU =  new ArrayList<>() ;
-		 attaquesEAU.add(appelAttaque);
-		 System.out.println("Affichage de la liste : ");
-		 for (Attaque elementDeLaListe : attaquesEAU) {
-			 System.out.println(elementDeLaListe);
-		 }
-
 
 		EspecePokemon saquedeneu = new  EspecePokemon("Saquedeneu",EnumeType.PLANTE,100,attaquesPlante);
 		EspecePokemon airmure = new  EspecePokemon("Airmure",EnumeType.AIRE,100,attaquesAire);
