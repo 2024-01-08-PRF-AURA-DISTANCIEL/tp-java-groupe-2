@@ -66,6 +66,23 @@ public class Pokemon {
 		return attaque;
 	}
 
+
+	/*
+	Discussion
+Il est possible de faire discuter les Pokémons. La discussion se déroule comme suit :
+•
+Un Pokémon est choisi au hasard.
+•
+Il 'parle' : une ligne est affichée sur la console indiquant le nom du Pokémon et ce qu'il dit.
+•
+Ce que dit le Pokémon est une 'phrase'constituée du nom de son espèce, dit de une à trois fois (choix aléatoire), et aléatoirement d'un point, d'un point d'exclamation, ou d'un point d'interrogation.
+•
+On choisit un nouveau Pokémon, et on continue jusqu'à ce que 5 Pokémons aient parlé.
+•
+Un Pokémon ne peut pas parler plus d'une fois.
+	*
+	* */
+
 	@Override
 	public String toString() {
 		return "Pokemon{" +
