@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="220d0cbd-c7ff-4450-8b08-3797170e1243" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Pokemon.java" afterDir="false" />
     </list>
@@ -56,7 +58,7 @@
       <updated>1716392075138</updated>
       <workItem from="1716392076188" duration="2507000" />
       <workItem from="1716399787526" duration="2897000" />
-      <workItem from="1716442141393" duration="21309000" />
+      <workItem from="1716442141393" duration="25013000" />
     </task>
     <servers />
   </component>

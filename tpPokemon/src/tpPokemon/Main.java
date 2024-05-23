@@ -3,7 +3,7 @@ package tpPokemon;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+import java.util.stream.Collectors;
 
 
 public class Main {
@@ -85,6 +85,9 @@ public class Main {
 
 		 Pokemon pokemonInsecte = new Pokemon("Carapuce",100,tortank);
 		 pokemons.add(pokemonInsecte);
+
+
+
 
 		 //afficher ensuite dans la console, une liste de commandes que l’on peut effectuer.
 		 Scanner scannerClavier = new Scanner(System.in);
@@ -170,5 +173,37 @@ public class Main {
 				System.out.println(activiter);
 			}
 		}
+
+
+		/*
+	Discussion
+Il est possible de faire discuter les Pokémons. La discussion se déroule comme suit :
+•
+Un Pokémon est choisi au hasard.
+•
+Il 'parle' : une ligne est affichée sur la console indiquant le nom du Pokémon et ce qu'il dit.
+•
+Ce que dit le Pokémon est une 'phrase'constituée du nom de son espèce, dit de une à trois fois (choix aléatoire), et aléatoirement d'un point, d'un point d'exclamation, ou d'un point d'interrogation.
+•
+On choisit un nouveau Pokémon, et on continue jusqu'à ce que 5 Pokémons aient parlé.
+•
+Un Pokémon ne peut pas parler plus d'une fois.
+	*
+	* */
+
+
+
+
+
+	public static void discuter(List<Pokemon> pokemons){
+		//Un pokémon est choisi au hazard
+
+		for(List<Pokemon> element : pokemons)
+		pokemons.stream()
+				.map(p -> p.getEspecePokemon());
+
+
+
+	}
 }
 
