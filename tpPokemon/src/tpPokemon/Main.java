@@ -79,21 +79,23 @@ public class Main {
 		EspecePokemon maskadra = new  EspecePokemon("Maskadra",EnumeType.INSECT,100, attaquesInsect);
 		EspecePokemon tortank = new  EspecePokemon("Tortank",EnumeType.EAU,100,attaquesEAU);
 
-		 List<Pokemon> pokemonsPlante =  new ArrayList<>() ;
-		 Pokemon pokemon1 = new Pokemon("Bulbizarre", 100, maskadra);
-		 pokemonsPlante.add(pokemon1);
+		 List<Pokemon> pokemons =  new ArrayList<>() ;
 
-		 List<Pokemon> pokemonsAire =  new ArrayList<>() ;
-		 Pokemon pokemon2 = new Pokemon("Mélofée",100,saquedeneu );
-		 pokemonsAire.add(pokemon2);
 
-		 List<Pokemon> pokemonsInsect =  new ArrayList<>() ;
-		 Pokemon pokemon3 = new Pokemon("Raichu",100,airmure);
-		 pokemonsInsect.add(pokemon3);
+		 Pokemon pokemonPlante = new Pokemon("Bulbizarre", 100, maskadra);
+		 pokemons.add(pokemonPlante);
 
-		 List<Pokemon> pokemonsEAU =  new ArrayList<>() ;
-		 Pokemon pokemon4 = new Pokemon("Carapuce",100,tortank);
-		 pokemonsEAU.add(pokemon4);
+
+		 Pokemon pokemonAire = new Pokemon("Mélofée",100,saquedeneu );
+		 pokemons.add(pokemonAire);
+
+
+		 Pokemon pokemonEAU = new Pokemon("Raichu",100,airmure);
+		 pokemons.add(pokemonEAU);
+
+
+		 Pokemon pokemonInsecte = new Pokemon("Carapuce",100,tortank);
+		 pokemons.add(pokemonInsecte);
 
 		 //afficher ensuite dans la console, une liste de commandes que l’on peut effectuer.
 		 Scanner scannerClavier = new Scanner(System.in);
@@ -113,17 +115,17 @@ public class Main {
          switch (commandes) {
 			 case "1" :
 				 System.out.println("Liste des pokemons");
-				 System.out.println(pokemon1);
-				 System.out.println(pokemon1.getUniqueID());
+				 System.out.println(pokemonPlante);
+				 System.out.println(pokemonPlante.getUniqueID().hashCode());
 
-				 System.out.println(pokemon2);
-				 System.out.println(pokemon2.getUniqueID());
+				 System.out.println(pokemonAire);
+				 System.out.println(pokemonAire.getUniqueID());
 
-				 System.out.println(pokemon3);
-				 System.out.println(pokemon3.getUniqueID());
+				 System.out.println(pokemonEAU);
+				 System.out.println(pokemonEAU.getUniqueID());
 
-				 System.out.println(pokemon4);
-				 System.out.println(pokemon4.getUniqueID());
+				 System.out.println(pokemonInsecte);
+				 System.out.println(pokemonInsecte.getUniqueID());
 				 break;
 
 			 case "2" :
@@ -164,10 +166,8 @@ public class Main {
 			break;
 		}
 
-
 		scannerClavier.close();
-		
-         
+
      }
 	 
 		public static void listActiviter() {
