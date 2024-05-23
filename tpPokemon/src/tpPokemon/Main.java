@@ -12,9 +12,25 @@ public class Main {
 	 public static void main(String[] args) {
 
 		Attaque aireDEau = new Attaque("Aire d'eau", EnumeType.EAU, 80);
+		Attaque anneauHydro = new Attaque("Anneau Hydro", EnumeType.EAU, 50);
+		Attaque aquaBreche = new Attaque("Aqua-Breche", EnumeType.EAU, 85);
+		Attaque aquaJet = new Attaque("Aqua-Jet", EnumeType.EAU, 40);
+		
 		Attaque acideMalique = new Attaque("Acide Malique", EnumeType.PLANTE, 80);
+		Attaque aireDHerbe = new Attaque("Aire d'Herbe", EnumeType.PLANTE, 80);
+		Attaque aromathérapie = new Attaque("Aromathérapie", EnumeType.PLANTE, 50);
+		Attaque balleGraine = new Attaque("Balle Graine", EnumeType.PLANTE, 25);
+		
 		Attaque acrobatie  = new Attaque("Acrobatie", EnumeType.AIRE, 55);
+		Attaque aéroblast = new Attaque("Aéroblast", EnumeType.AIRE, 100);
+		Attaque aéropique = new Attaque("Aéropique", EnumeType.AIRE, 60);
+		Attaque antiBrume = new Attaque("Anti-Brume", EnumeType.AIRE, 30);
+
 		Attaque appelAttaque = new Attaque("Appel Attaque", EnumeType.INSECT, 90);
+		Attaque appelDéfense = new Attaque("Appel Défense", EnumeType.INSECT, 35);
+		Attaque appelSoins = new Attaque("Appel Soins", EnumeType.INSECT, 65);
+		Attaque boulePollen = new Attaque("Boule Pollen", EnumeType.INSECT, 55);
+
 		
 		List<Attaque> attaquesPlante =  new ArrayList<>() ;
 		attaquesPlante.add(acideMalique);
