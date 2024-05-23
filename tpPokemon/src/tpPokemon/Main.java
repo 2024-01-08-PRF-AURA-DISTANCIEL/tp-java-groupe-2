@@ -1,8 +1,6 @@
 package tpPokemon;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -97,6 +95,51 @@ public class Main {
 		Pokemon pokemonInsecte = new Pokemon("Carapuce", 100, tortank);
 		pokemons.add(pokemonInsecte);
 
+		/*
+	Discussion
+Il est possible de faire discuter les Pokémons. La discussion se déroule comme suit :
+•
+Un Pokémon est choisi au hasard.
+•
+Il 'parle' : une ligne est affichée sur la console indiquant le nom du Pokémon et ce qu'il dit.
+•
+Ce que dit le Pokémon est une 'phrase'constituée du nom de son espèce, dit de une à trois fois (choix aléatoire), et aléatoirement d'un point, d'un point d'exclamation, ou d'un point d'interrogation.
+•
+On choisit un nouveau Pokémon, et on continue jusqu'à ce que 5 Pokémons aient parlé.
+•
+Un Pokémon ne peut pas parler plus d'une fois.
+	*
+	* */
+
+		//Pokemon choisi au hazard à partir de la liste pokemons
+		System.out.println("Elements de la liste : ");
+		for(int i = 0; i < pokemons.size(); i++ ) {
+			// to print the elements in the list
+			System.out.println(pokemons.get(i));
+		}
+		Random rndm = new Random();
+		// creating object
+		Pokemon rndmElem = pokemons.get(rndm.nextInt(pokemons.size()));
+		System.out.println("Selection  d'un element random à partir de la liste : " + rndmElem);
+
+		//Faire parler un pokemon pour cela
+		/*exple :  pokemons.getNom() + (ce qu'il dit)
+		* ce qu'il dit : phrase(chainedecaractere) (pokemon+getEspeceDePokemon() (1 à 3 fois en random) +
+		*  point (randomly) /ou point d'exclamation (randomly)/ou point d'interrogation (randomly)
+		* */
+
+		/*Random r = new Random();
+		int nbr1 = 1;
+		int nbr2 = 3;
+		int resultat = r.nextInt(nbr2-nbr1) + nbr1;*/
+		extracted();
+
+		System.out.println("On affiche de manière aléatoire le nom d'un pokemon : ");
+		for(int i = 0; i < 5; i++ ) {
+
+			System.out.println("Je m'appelle " + rndmElem.getNom() + " j'appartiens à l'espèce " + rndmElem.getEspecePokemon().getNomEspece() );
+		}
+
 
 		//afficher ensuite dans la console, une liste de commandes que l’on peut effectuer.
 		Scanner scannerClavier = new Scanner(System.in);
@@ -171,6 +214,15 @@ public class Main {
 
 	}
 
+	public static void extracted() {
+		String[] point = {".", "!", "?"};
+
+		Random r = new Random();
+
+		int i1 =   r.nextInt(point.length);
+		System.out.println("affiche : " + point[i1]);
+	}
+
 	public static void listActiviter() {
 		System.out.println("Tu peux choisir entre ces trois activités.");
 		String[] arrayChoix = new String[4];
@@ -184,21 +236,9 @@ public class Main {
 	}
 
 
-		/*
-	Discussion
-Il est possible de faire discuter les Pokémons. La discussion se déroule comme suit :
-•
-Un Pokémon est choisi au hasard.
-•
-Il 'parle' : une ligne est affichée sur la console indiquant le nom du Pokémon et ce qu'il dit.
-•
-Ce que dit le Pokémon est une 'phrase'constituée du nom de son espèce, dit de une à trois fois (choix aléatoire), et aléatoirement d'un point, d'un point d'exclamation, ou d'un point d'interrogation.
-•
-On choisit un nouveau Pokémon, et on continue jusqu'à ce que 5 Pokémons aient parlé.
-•
-Un Pokémon ne peut pas parler plus d'une fois.
-	*
-	* */
+
+
+
 
 
 }
