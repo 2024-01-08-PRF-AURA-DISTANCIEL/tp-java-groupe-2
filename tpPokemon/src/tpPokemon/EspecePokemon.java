@@ -11,10 +11,9 @@ public class EspecePokemon {
 	private EnumeType enumeType;
 	static int pointDeVieinit ;
 	List<Attaque> attaques  ;
- 
-	
-	
-	
+
+
+
 	public EspecePokemon(String nomEspece, EnumeType enumeType, int pointDeVieinit, List<Attaque> attaques) {
 		this.nomEspece = nomEspece;
 		this.enumeType = enumeType;
@@ -47,11 +46,12 @@ public class EspecePokemon {
 		return attaques;
 	}
 
-
-	public static void main(String[] args) {
-        
-
+	@Override
+	public String toString() {
+		return "EspecePokemon{" +
+				"nomEspece='" + nomEspece + '\'' +
+				", enumeType=" + enumeType +
+				", attaques=" + attaques +
+				'}';
 	}
-
-
 }
