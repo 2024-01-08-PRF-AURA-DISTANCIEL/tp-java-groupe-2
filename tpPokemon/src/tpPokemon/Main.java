@@ -11,6 +11,7 @@ public class Main {
 
 	 public static void main(String[] args) {
 
+
 		Attaque aireDEau = new Attaque("Aire d'eau", EnumeType.EAU, 80);
 		Attaque anneauHydro = new Attaque("Anneau Hydro", EnumeType.EAU, 50);
 		Attaque aquaBreche = new Attaque("Aqua-Breche", EnumeType.EAU, 85);
@@ -132,5 +133,42 @@ public class Main {
 			 default :
 				 System.out.println("Choix incorrect");
          }
+     	System.out.println("Bienvenue dans le monde de Pokémon");
+		listActiviter();
+		int po = scannerClavier.nextInt();	
+		switch (po) {
+		case 1:
+			//listPokemon(listPokemon);
+			break;
+		case 2:
+		//	combat();
+			break;
+		case 3:
+			//discussion(listPokemon);
+			break;
+		case 4:
+		//	promenade(listPokemon);
+			break;
+		default:
+			break;
+		}
+
+
+		scannerClavier.close();
+		
+         
      }
+	 
+		public static void listActiviter() {
+			System.out.println("Tu peux choisir entre ces trois activités.");
+			String[] arrayChoix = new String[4];
+			arrayChoix[0] = "1 Pokémon";
+			arrayChoix[1] = "2 Combat";
+			arrayChoix[2] = "3 Discussion";
+			arrayChoix[3] = "4 Promenade";
+			for (String activiter : arrayChoix) {
+				System.out.println(activiter);
+			}
+		}
 }
+
