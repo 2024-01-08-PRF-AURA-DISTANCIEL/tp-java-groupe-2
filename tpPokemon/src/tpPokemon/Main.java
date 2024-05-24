@@ -176,6 +176,14 @@ Un Pokémon ne peut pas parler plus d'une fois.
 				System.out.println("Choix incorrect");
 		}
 
+		
+		//Interface d'utilisation 
+		/*
+		 * Lance la fonction d'affiche pour l'utilisateur avec un switch
+		 * permet de continuer le programme en fonction du choix de l'utilisateur
+		 *
+		 * */
+		
      	System.out.println("Bienvenue dans le monde de Pokémon");
 		listActiviter();
 		int po = scannerClavier.nextInt();
@@ -218,6 +226,17 @@ Un Pokémon ne peut pas parler plus d'une fois.
 		System.out.println("affiche : " + point[i1]);
 	}
 
+	//Fonction qui permet d'afficher les choix pour l'utilisateur 
+	/*
+	 * 
+	 * Exemple : 
+	 * 1- La liste des pokémons
+	 * 2- le Combat
+	 * 3- la Discussion
+	 * 4- la Promenade
+	 * 
+	 * */
+	
 	public static void listActiviter() {
 		System.out.println("Tu peux choisir entre ces trois activités.");
 		String[] arrayChoix = new String[4];
