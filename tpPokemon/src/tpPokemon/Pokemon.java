@@ -4,7 +4,6 @@ import java.util.UUID;
 
 public class Pokemon {
 
-	// TODO Auto-generated constructor stub
 	//Données membres
 	private UUID uniqueID;
 	private String nom;
@@ -32,7 +31,6 @@ public class Pokemon {
 	}
 
 	//Getters et Setters
-
 	public UUID getUniqueID() {
 		return UUID.randomUUID();
 	}
