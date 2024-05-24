@@ -1,10 +1,5 @@
 package tpPokemon;
 
-
-
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.List;
 import java.util.UUID;
 
 public class Pokemon {
@@ -50,9 +45,16 @@ public class Pokemon {
 		return niveau;
 	}
 
+	public void setNiveau(int niveau) {
+		this.niveau = niveau;
+	}
 
 	public int getPointExperience() {
 		return pointExperience;
+	}
+
+	public void setPointExperience(int pointExperience) {
+		this.pointExperience = pointExperience;
 	}
 
 	public int getPointDeVie() {
@@ -70,11 +72,6 @@ public class Pokemon {
 		return attaque;
 	}
 
-
-
-
-
-
 	@Override
 	public String toString() {
 		return "Pokemon{" +
@@ -88,7 +85,5 @@ public class Pokemon {
 				", attaque=" + attaque +
 				'}';
 	}
-
-
 }
 

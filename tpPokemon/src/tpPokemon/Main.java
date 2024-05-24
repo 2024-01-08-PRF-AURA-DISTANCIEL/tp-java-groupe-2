@@ -1,12 +1,8 @@
 package tpPokemon;
 
 import java.util.*;
-import java.util.stream.Collectors;
-
 
 public class Main {
-
-
 	public static void main(String[] args) {
 
 
@@ -35,42 +31,28 @@ public class Main {
 		attaquesEAU.add(anneauHydro);
 		attaquesEAU.add(aquaBreche);
 		attaquesEAU.add(aquaJet);
-		System.out.println("Affichage de la liste : ");
-		for (Attaque elementDeLaListe : attaquesEAU) {
-			System.out.println(elementDeLaListe);
-		}
+		displayListAttacks(attaquesEAU);
 
 		List<Attaque> attaquesPlante = new ArrayList<>();
 		attaquesPlante.add(acideMalique);
 		attaquesPlante.add(aireDHerbe);
 		attaquesPlante.add(aromathérapie);
 		attaquesPlante.add(balleGraine);
-		System.out.println("Affichage de la liste : ");
-		for (Attaque elementDeLaListe : attaquesPlante) {
-			System.out.println(elementDeLaListe);
-		}
-
+		displayListAttacks(attaquesEAU);
 
 		List<Attaque> attaquesAire = new ArrayList<>();
 		attaquesAire.add(acrobatie);
 		attaquesAire.add(aéroblast);
 		attaquesAire.add(aéropique);
 		attaquesAire.add(antiBrume);
-		System.out.println("Affichage de la liste : ");
-		for (Attaque elementDeLaListe : attaquesAire) {
-			System.out.println(elementDeLaListe);
-		}
+		displayListAttacks(attaquesEAU);
 
 		List<Attaque> attaquesInsect = new ArrayList<>();
 		attaquesInsect.add(appelAttaque);
 		attaquesInsect.add(appelDéfense);
 		attaquesInsect.add(appelSoins);
 		attaquesInsect.add(boulePollen);
-		System.out.println("Affichage de la liste : ");
-		for (Attaque elementDeLaListe : attaquesInsect) {
-			System.out.println(elementDeLaListe);
-		}
-
+		displayListAttacks(attaquesEAU);
 
 		EspecePokemon saquedeneu = new EspecePokemon("Saquedeneu", EnumeType.PLANTE, 100, attaquesPlante);
 		EspecePokemon airmure = new EspecePokemon("Airmure", EnumeType.AIRE, 100, attaquesAire);
@@ -111,6 +93,11 @@ Un Pokémon ne peut pas parler plus d'une fois.
 	*
 	* */
 
+		 Promenades promenades=new Promenades();
+		 
+		 //afficher ensuite dans la console, une liste de commandes que l’on peut effectuer.
+		 Scanner scannerClavier = new Scanner(System.in);
+
 		//Pokemon choisi au hazard à partir de la liste pokemons
 		System.out.println("Elements de la liste : ");
 		for(int i = 0; i < pokemons.size(); i++ ) {
@@ -140,10 +127,6 @@ Un Pokémon ne peut pas parler plus d'une fois.
 			System.out.println("Je m'appelle " + rndmElem.getNom() + " j'appartiens à l'espèce " + rndmElem.getEspecePokemon().getNomEspece() );
 		}
 
-
-		//afficher ensuite dans la console, une liste de commandes que l’on peut effectuer.
-		Scanner scannerClavier = new Scanner(System.in);
-
 		//L'utilisateur choisit des commandes
 		/*
 		 * Exemple : 1- La liste des pokémons
@@ -151,8 +134,10 @@ Un Pokémon ne peut pas parler plus d'une fois.
 		 * 3- La liste des espèces
 		 * je dois combiner le switch avec un while si possible
 		 * */
-		System.out.println("Veuillez choisir une commande");
-
+		 System.out.println("Veuillez choisir une commande");
+		 System.out.println("1 - Liste des pokemons");
+		 System.out.println("2 - Liste des attaques");
+		 System.out.println("3 - Liste des espèces");
 
 		String commandes = scannerClavier.nextLine();
 
@@ -161,13 +146,10 @@ Un Pokémon ne peut pas parler plus d'une fois.
 				System.out.println("Liste des pokemons");
 				System.out.println(pokemonPlante);
 				System.out.println(pokemonPlante.getUniqueID().hashCode());
-
 				System.out.println(pokemonAire);
 				System.out.println(pokemonAire.getUniqueID());
-
 				System.out.println(pokemonEAU);
 				System.out.println(pokemonEAU.getUniqueID());
-
 				System.out.println(pokemonInsecte);
 				System.out.println(pokemonInsecte.getUniqueID());
 				break;
@@ -190,29 +172,39 @@ Un Pokémon ne peut pas parler plus d'une fois.
 			default:
 				System.out.println("Choix incorrect");
 		}
-		System.out.println("Bienvenue dans le monde de Pokémon");
+
+     	System.out.println("Bienvenue dans le monde de Pokémon");
 		listActiviter();
 		int po = scannerClavier.nextInt();
-		switch (po) {
-			case 1:
-				//listPokemon(listPokemon);
-				break;
-			case 2:
+		do {
+			
+			switch (po) {
+				case 1:
+		//			listPokemon(listPokemon);
+					break;
+				case 2:
 				//	combat();
-				break;
-			case 3:
-				//discussion(listPokemon);
-				break;
-			case 4:
-				//	promenade(listPokemon);
-				break;
-			default:
-				break;
-		}
-
+					break;
+				case 3:
+					//discussion(listPokemon);
+					break;
+				case 4:
+					promenades.promenades();
+					break;
+				default:
+					if(po == 0) {
+						System.out.println("Vous avez quittez le monde des Pokemons");
+						break;
+					}else {
+						System.out.println("Merci de rentrer un choix valide.");
+					}
+					break;
+				}
+			System.out.println("Voulez-vous faire un autre choix ? Sinon tapez 0 pour quitter.");
+			po = scannerClavier.nextInt();
+		}while(po != 0);
 		scannerClavier.close();
-
-	}
+ }
 
 	public static void extracted() {
 		String[] point = {".", "!", "?"};
@@ -234,12 +226,12 @@ Un Pokémon ne peut pas parler plus d'une fois.
 			System.out.println(activiter);
 		}
 	}
-
-
-
-
-
-
-
+	
+	public static void displayListAttacks(List<Attaque> attacks) {
+		System.out.println("Affichage de la liste des attaques de type : "+attacks.get(0).getType());
+		for (Attaque attack : attacks) {
+			System.out.println(attack);
+		}
+	}
 }
 

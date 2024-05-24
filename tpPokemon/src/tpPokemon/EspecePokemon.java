@@ -7,10 +7,10 @@ import java.util.List;
 
 public class EspecePokemon {
 
-	private String nomEspece ;
+	private String nomEspece;
 	private EnumeType enumeType;
-	static int pointDeVieinit ;
-	List<Attaque> attaques  ;
+	static int pointDeVieinit;
+	List<Attaque> attaques;
 
 
 
@@ -20,13 +20,6 @@ public class EspecePokemon {
 		this.pointDeVieinit = pointDeVieinit;
 		this.attaques = attaques ;
 	}
-
-
-	public EspecePokemon() {
-		// TODO Auto-generated constructor stub
-		
-	}
-
 
 	public String getNomEspece() {
 		return nomEspece;
