@@ -1,3 +1,4 @@
+
 package tpPokemon.pokemon;
 
 import java.util.ArrayList;
@@ -5,7 +6,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Promenades {
+	
 	Scanner scannerClavier = new Scanner(System.in);
+	
 	Pokemon air=null;
 	{
 		Attaque acrobatie  = new Attaque("Acrobatie", EnumeType.AIRE, 55);
@@ -14,31 +17,25 @@ public class Promenades {
 		EspecePokemon airmure = new  EspecePokemon("Airmure",EnumeType.AIRE,100,attaquesAire);
 		air= new Pokemon("Raichu",100, airmure);
 	}
-	public void listPokemon() {
+	
+	public void listPokemon(List<Pokemon> pokemons) {
 		System.out.println("Choisisez un pokemon à promener");
-		System.out.println("1");
+		int i=1;
+		for (Pokemon pokemon : pokemons) {
+			System.out.println(i+" - "+pokemon.getNom()+" - Type : "+pokemon.getEspecePokemon().getEnumeType()+" - Points de vie : "+pokemon.getPointDeVie());
+			i++;
+		}
 	}
 	
-	public Pokemon choixPokemon() {
-		String choix = scannerClavier.nextLine();
-		switch (choix) {
-		case "1":
-			System.out.println("Pokemon 1");
-			break;
-		case "2":
-			System.out.println("Pokemon 2");
-			break;
-		case "3":
-			System.out.println("Pokemon 3");
-			break;
-		case "4":
-			System.out.println("Pokemon 4");
-			break;
-		default:
-			break;
+	public Pokemon choixPokemon(List<Pokemon> pokemons) {
+		int choix = scannerClavier.nextInt();
+		while(choix <= 0 || choix > pokemons.size()) {
+			System.out.print("Entré un choix valide");
+			choix = scannerClavier.nextInt();
 		}
-		System.out.println("Type de pokemon : "+air.getEspecePokemon().getEnumeType());
-		return air;
+			 
+		scannerClavier.nextLine(); // vidage buffer
+		return pokemons.get(choix-1);
 		
 	}
 	
@@ -73,9 +70,9 @@ public class Promenades {
 		return choix;
 	}
 	
-	public void promenades() {
-		this.listPokemon();
-		Pokemon pokemon=choixPokemon();
+	public void promenades(List<Pokemon> pokemons) {
+		this.listPokemon(pokemons);
+		Pokemon pokemon=choixPokemon(pokemons);
 		this.listDesPromenades();
 		EnumePromenade lieuPromenade=this.choixDeLaPromenade();
 		
@@ -111,3 +108,4 @@ public class Promenades {
 	}
 //	scannerClavier.close();
 }
+

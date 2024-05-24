@@ -176,15 +176,18 @@ Un Pokémon ne peut pas parler plus d'une fois.
 			switch (po) {
 				case 1:
 		//			listPokemon(listPokemon);
+					System.out.println("List pokemon");
 					break;
 				case 2:
 				//	combat();
+					System.out.println("Combat");
 					break;
 				case 3:
 					//discussion(listPokemon);
+					System.out.println("Discussion");
 					break;
 				case 4:
-					promenades.promenades();
+					promenades.promenades(pokemons);
 					break;
 				default:
 					if(po == 0) {
