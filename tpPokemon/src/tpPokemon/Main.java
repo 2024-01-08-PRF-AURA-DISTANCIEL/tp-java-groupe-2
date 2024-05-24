@@ -104,8 +104,8 @@ Un Pokémon ne peut pas parler plus d'une fois.
 			System.out.println(pokemons.get(i));
 		}
 
-		System.out.println("Initier une discussion avec un pokemon");
-		discussion(pokemons);
+		/*System.out.println("Initier une discussion avec un pokemon");
+		discussion(pokemons);*/
 
 		//L'utilisateur choisit des commandes
 		/*
@@ -183,8 +183,9 @@ Un Pokémon ne peut pas parler plus d'une fois.
 					System.out.println("Combat");
 					break;
 				case 3:
-					//discussion(listPokemon);
 					System.out.println("Discussion");
+					discussion(pokemons);
+
 					break;
 				case 4:
 					promenades.promenades(pokemons);
