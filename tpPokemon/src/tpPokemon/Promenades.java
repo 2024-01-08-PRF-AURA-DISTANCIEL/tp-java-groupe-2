@@ -1,21 +1,11 @@
 package tpPokemon;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Promenades {
 	
 	Scanner scannerClavier = new Scanner(System.in);
-	
-	Pokemon air=null;
-	{
-		Attaque acrobatie  = new Attaque("Acrobatie", EnumeType.AIRE, 55);
-		List<Attaque> attaquesAire =  new ArrayList<>() ;
-		attaquesAire.add(acrobatie);
-		EspecePokemon airmure = new  EspecePokemon("Airmure",EnumeType.AIRE,100,attaquesAire);
-		air= new Pokemon("Raichu",100, airmure);
-	}
 	
 	public void listPokemon(List<Pokemon> pokemons) {
 		System.out.println("Choisisez un pokemon à promener");
@@ -105,5 +95,4 @@ public class Promenades {
 		}
 		
 	}
-//	scannerClavier.close();
 }
