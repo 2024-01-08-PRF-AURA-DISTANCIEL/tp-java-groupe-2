@@ -59,6 +59,10 @@ public class Pokemon {
 		return pointDeVie;
 	}
 
+	public void setPointDeVie(int pointDeVie) {
+		this.pointDeVie = pointDeVie;
+	}
+
 	public int getPointDeVieMax() {
 		return pointDeVieMax;
 	}
