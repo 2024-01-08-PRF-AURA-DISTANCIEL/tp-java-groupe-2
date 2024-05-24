@@ -31,50 +31,47 @@ public class Main {
 		attaquesEAU.add(anneauHydro);
 		attaquesEAU.add(aquaBreche);
 		attaquesEAU.add(aquaJet);
-		displayListAttacks(attaquesEAU);
 
 		List<Attaque> attaquesPlante = new ArrayList<>();
 		attaquesPlante.add(acideMalique);
 		attaquesPlante.add(aireDHerbe);
 		attaquesPlante.add(aromathérapie);
 		attaquesPlante.add(balleGraine);
-		displayListAttacks(attaquesEAU);
 
 		List<Attaque> attaquesAire = new ArrayList<>();
 		attaquesAire.add(acrobatie);
 		attaquesAire.add(aéroblast);
 		attaquesAire.add(aéropique);
 		attaquesAire.add(antiBrume);
-		displayListAttacks(attaquesEAU);
 
 		List<Attaque> attaquesInsect = new ArrayList<>();
 		attaquesInsect.add(appelAttaque);
 		attaquesInsect.add(appelDéfense);
 		attaquesInsect.add(appelSoins);
 		attaquesInsect.add(boulePollen);
-		displayListAttacks(attaquesEAU);
-
+		
 		EspecePokemon saquedeneu = new EspecePokemon("Saquedeneu", EnumeType.PLANTE, 100, attaquesPlante);
 		EspecePokemon airmure = new EspecePokemon("Airmure", EnumeType.AIRE, 100, attaquesAire);
 		EspecePokemon maskadra = new EspecePokemon("Maskadra", EnumeType.INSECT, 100, attaquesInsect);
 		EspecePokemon tortank = new EspecePokemon("Tortank", EnumeType.EAU, 100, attaquesEAU);
 
+		List<EspecePokemon> especesPokemons=new ArrayList<>();
+		especesPokemons.add(saquedeneu);
+		especesPokemons.add(airmure);
+		especesPokemons.add(maskadra);
+		especesPokemons.add(tortank);
+		
 		List<Pokemon> pokemons = new ArrayList<>();
 
 
 		Pokemon pokemonPlante = new Pokemon("Bulbizarre", 100, maskadra);
-		pokemons.add(pokemonPlante);
-
-
 		Pokemon pokemonAire = new Pokemon("Mélofée", 100, saquedeneu);
-		pokemons.add(pokemonAire);
-
-
 		Pokemon pokemonEAU = new Pokemon("Raichu", 100, airmure);
-		pokemons.add(pokemonEAU);
-
-
 		Pokemon pokemonInsecte = new Pokemon("Carapuce", 100, tortank);
+
+		pokemons.add(pokemonPlante);
+		pokemons.add(pokemonAire);
+		pokemons.add(pokemonEAU);
 		pokemons.add(pokemonInsecte);
 
 		/*
@@ -144,29 +141,35 @@ Un Pokémon ne peut pas parler plus d'une fois.
 		switch (commandes) {
 			case "1":
 				System.out.println("Liste des pokemons");
-				System.out.println(pokemonPlante);
+				displayGenericTypeList(pokemons);
+				/*System.out.println(pokemonPlante);
 				System.out.println(pokemonPlante.getUniqueID().hashCode());
 				System.out.println(pokemonAire);
 				System.out.println(pokemonAire.getUniqueID());
 				System.out.println(pokemonEAU);
 				System.out.println(pokemonEAU.getUniqueID());
 				System.out.println(pokemonInsecte);
-				System.out.println(pokemonInsecte.getUniqueID());
+				System.out.println(pokemonInsecte.getUniqueID());*/
 				break;
 
 			case "2":
 				System.out.println("Liste des attaques");
-				System.out.println(aireDEau);
+				displayListAttacks(attaquesEAU);
+				displayListAttacks(attaquesPlante);
+				displayListAttacks(attaquesAire);
+				displayListAttacks(attaquesInsect);
+				/*System.out.println(aireDEau);
 				System.out.println(acideMalique);
 				System.out.println(acrobatie);
-				System.out.println(appelAttaque);
+				System.out.println(appelAttaque);*/
 				break;
 			case "3":
 				System.out.println("Liste des espèces");
-				System.out.println(saquedeneu);
+				displayGenericTypeList(especesPokemons);
+				/*System.out.println(saquedeneu);
 				System.out.println(airmure);
 				System.out.println(maskadra);
-				System.out.println(tortank);
+				System.out.println(tortank);*/
 				break;
 
 			default:
@@ -231,6 +234,13 @@ Un Pokémon ne peut pas parler plus d'une fois.
 		System.out.println("Affichage de la liste des attaques de type : "+attacks.get(0).getType());
 		for (Attaque attack : attacks) {
 			System.out.println(attack);
+		}
+	}
+	
+	public static <T> void displayGenericTypeList(List<T> objects) {
+		System.out.println("Affichage de la liste :");
+		for (T object : objects) {
+			System.out.println(object);
 		}
 	}
 }
