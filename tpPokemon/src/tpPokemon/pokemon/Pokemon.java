@@ -1,4 +1,4 @@
-package tpPokemon;
+package tpPokemon.pokemon;
 
 import java.util.UUID;
 

@@ -1,5 +1,7 @@
 package tpPokemon;
 
+import tpPokemon.pokemon.*;
+
 import java.util.*;
 
 public class Main {
@@ -205,7 +207,6 @@ Un Pokémon ne peut pas parler plus d'une fois.
 	 */
 	public static void discussion(List<Pokemon> pokemons) {
 		Random rndm = new Random();
-
 
 		Pokemon rndmElem = pokemons.get(rndm.nextInt(pokemons.size()));
 		System.out.println("Selection  d'un element random à partir de la liste : " + rndmElem);

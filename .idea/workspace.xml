@@ -5,13 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="220d0cbd-c7ff-4450-8b08-3797170e1243" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Arene/TypeArene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Arene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Arene/Arene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/AreneChamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/AreneChamp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/AreneMaraisToxique.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/AreneMaraisToxique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/AreneVille.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/AreneVille.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/AreneVolcan.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/AreneVolcan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Attaque.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/pokemon/Attaque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/EnumePromenade.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/pokemon/EnumePromenade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/EnumeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/pokemon/EnumeType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/EspecePokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/pokemon/EspecePokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/pokemon/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Promenades.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/pokemon/Promenades.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,7 +76,7 @@
       <workItem from="1716392076188" duration="2507000" />
       <workItem from="1716399787526" duration="2897000" />
       <workItem from="1716442141393" duration="32264000" />
-      <workItem from="1716532804187" duration="4682000" />
+      <workItem from="1716532804187" duration="8916000" />
     </task>
     <servers />
   </component>

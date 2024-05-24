@@ -1,4 +1,4 @@
-package tpPokemon;
+package tpPokemon.pokemon;
 
 public class Attaque {
 

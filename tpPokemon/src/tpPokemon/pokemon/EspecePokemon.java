@@ -1,6 +1,5 @@
-package tpPokemon;
+package tpPokemon.pokemon;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
