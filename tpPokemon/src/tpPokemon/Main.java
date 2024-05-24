@@ -182,7 +182,7 @@ Un Pokémon ne peut pas parler plus d'une fois.
 					//discussion(listPokemon);
 					break;
 				case 4:
-					promenades.promenades();
+					promenades.promenades(pokemons);
 					break;
 				default:
 					if(po == 0) {
