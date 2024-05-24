@@ -1,22 +1,12 @@
-package tpPokemon;
+package tpPokemon.pokemon;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Promenades {
-	
+
 	Scanner scannerClavier = new Scanner(System.in);
-	
-	Pokemon air=null;
-	{
-		Attaque acrobatie  = new Attaque("Acrobatie", EnumeType.AIRE, 55);
-		List<Attaque> attaquesAire =  new ArrayList<>() ;
-		attaquesAire.add(acrobatie);
-		EspecePokemon airmure = new  EspecePokemon("Airmure",EnumeType.AIRE,100,attaquesAire);
-		air= new Pokemon("Raichu",100, airmure);
-	}
-	
+
 	public void listPokemon(List<Pokemon> pokemons) {
 		System.out.println("Choisisez un pokemon à promener");
 		int i=1;
@@ -25,28 +15,28 @@ public class Promenades {
 			i++;
 		}
 	}
-	
+
 	public Pokemon choixPokemon(List<Pokemon> pokemons) {
 		int choix = scannerClavier.nextInt();
 		while(choix <= 0 || choix > pokemons.size()) {
 			System.out.print("Entré un choix valide");
 			choix = scannerClavier.nextInt();
 		}
-			 
+
 		scannerClavier.nextLine(); // vidage buffer
 		return pokemons.get(choix-1);
-		
+
 	}
-	
+
 	public void listDesPromenades() {
 		System.out.println("Ou voulez-vous promener votre pokemon ?");
 		int i=1;
 		for (EnumePromenade promenade : EnumePromenade.values()) {
 			System.out.println(i+" - "+promenade);
 			i++;
-		}	
+		}
 	}
-	
+
 	public EnumePromenade choixDeLaPromenade() {
 		EnumePromenade choix = null;
 		String commande = scannerClavier.nextLine();
@@ -54,7 +44,7 @@ public class Promenades {
 
 		switch (commande) {
 			case "1":
-				choix= EnumePromenade.PLAGE; 
+				choix= EnumePromenade.PLAGE;
 				break;
 			case "2":
 				choix= EnumePromenade.JUNGLE;
@@ -65,16 +55,16 @@ public class Promenades {
 			case "4":
 				choix= EnumePromenade.DESERT;
 				break;
-			}
+		}
 		return choix;
 	}
-	
+
 	public void promenades(List<Pokemon> pokemons) {
 		this.listPokemon(pokemons);
 		Pokemon pokemon=choixPokemon(pokemons);
 		this.listDesPromenades();
 		EnumePromenade lieuPromenade=this.choixDeLaPromenade();
-		
+
 		Boolean isLike=false;
 		System.out.println("lieu promenade : "+lieuPromenade);
 		if(pokemon.getEspecePokemon().getEnumeType()==EnumeType.EAU && lieuPromenade==EnumePromenade.PLAGE) {
@@ -86,7 +76,7 @@ public class Promenades {
 		}else if(pokemon.getEspecePokemon().getEnumeType()==EnumeType.AIRE && lieuPromenade==EnumePromenade.DESERT) {
 			isLike=true;
 		}
-		
+
 		if(isLike) {
 			System.out.println("Le pokemon "+pokemon.getNom()+" a apprécié la promenade");
 			int oldXP=pokemon.getPointExperience();
@@ -95,7 +85,7 @@ public class Promenades {
 			int newXP=pokemon.getPointExperience();
 			System.out.println("Vous avez gagné 2 points d'XP !");
 			System.out.println("Point d'XP après promenade : "+newXP);
-			
+
 			if(oldXP % 5 >= newXP % 5) {
 				pokemon.setNiveau(pokemon.getNiveau()+1);
 				System.out.println("Vous êtes montées au niveau " +pokemon.getNiveau());
@@ -103,7 +93,6 @@ public class Promenades {
 		}else {
 			System.out.println("Le pokemon "+pokemon.getNom()+" n'a pas apprécié la promenade !");
 		}
-		
+
 	}
-//	scannerClavier.close();
 }
