@@ -1,5 +1,4 @@
-
-package tpPokemon.pokemon;
+package tpPokemon;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -108,4 +107,3 @@ public class Promenades {
 	}
 //	scannerClavier.close();
 }
-

@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="220d0cbd-c7ff-4450-8b08-3797170e1243" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/AreneChamp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/AreneMaraisToxique.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/AreneVille.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/AreneVolcan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/pokemon/Promenades.java" beforeDir="false" afterPath="$PROJECT_DIR$/tpPokemon/src/tpPokemon/pokemon/Promenades.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +34,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -68,7 +63,7 @@
       <workItem from="1716392076188" duration="2507000" />
       <workItem from="1716399787526" duration="2897000" />
       <workItem from="1716442141393" duration="32264000" />
-      <workItem from="1716532804187" duration="9810000" />
+      <workItem from="1716532804187" duration="10176000" />
     </task>
     <servers />
   </component>
