@@ -1,6 +1,9 @@
 package tpPokemon;
 
+import tpPokemon.Arene.TypeArene;
 import tpPokemon.pokemon.*;
+
+import tpPokemon.Arene.Arene;
 
 import java.util.*;
 
@@ -83,6 +86,9 @@ public class Main {
 		pokemons.add(pokemonPlante2);
 		pokemons.add(pokemonAire2);
 
+		//Instanciation classe Arene
+		Arene arene1 = new Arene(TypeArene.CHAMP);
+
 		/*
 	Discussion
 Il est possible de faire discuter les Pokémons. La discussion se déroule comme suit :
@@ -98,6 +104,7 @@ On choisit un nouveau Pokémon, et on continue jusqu'à ce que 5 Pokémons aient
 Un Pokémon ne peut pas parler plus d'une fois.
 	*
 	* */
+
 
 		 Promenades promenades=new Promenades();
 		 
@@ -186,7 +193,7 @@ Un Pokémon ne peut pas parler plus d'une fois.
 					System.out.println("List pokemon");
 					break;
 				case 2:
-				//	combat();
+					arene1.combat(pokemonAire2, pokemonEAU2);
 					System.out.println("Combat");
 					break;
 				case 3:

@@ -59,4 +59,19 @@ public class Arene {
 		}
 	}
 
+	public void combat(Pokemon pokemon1, Pokemon pokemon2) {
+		agitAuDebutDuCombat(pokemon1, pokemon2);
+
+
+		//Combattant A attaque
+		pokemon1.setPointDeVie(pokemon1.getPointDeVie()- pokemon2.getAttaque().getPointDeDegat());
+
+		System.out.println(pokemon2.getNom() + " a attaqué " + pokemon1.getPointDeVie() +  " et " + pokemon1.getNom() + " a perdu : " + pokemon2.getAttaque().getPointDeDegat() );
+		//Combattant B perd des points de vie
+		pokemon2.setPointDeVie(pokemon2.getPointDeVie()- pokemon1.getAttaque().getPointDeDegat());
+		System.out.println(pokemon1.getNom() + " a attaqué " + pokemon2.getPointDeVie() +  "et " + pokemon2.getNom() +" a perdu : " + pokemon1.getAttaque().getPointDeDegat() );
+
+
+	}
+
 }
