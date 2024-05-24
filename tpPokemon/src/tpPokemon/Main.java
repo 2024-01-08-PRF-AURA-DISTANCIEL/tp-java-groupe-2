@@ -97,6 +97,8 @@ public class Main {
 		 Pokemon pokemonInsecte = new Pokemon("Carapuce",100,tortank);
 		 pokemons.add(pokemonInsecte);
 
+		 Promenades promenades=new Promenades();
+		 
 		 //afficher ensuite dans la console, une liste de commandes que l’on peut effectuer.
 		 Scanner scannerClavier = new Scanner(System.in);
 
@@ -108,13 +110,14 @@ public class Main {
 		 * je dois combiner le switch avec un while si possible
 		 * */
 		 System.out.println("Veuillez choisir une commande");
-
-
+		 System.out.println("1 - Liste des pokemons");
+		 System.out.println("2 - Liste des attaques");
+		 System.out.println("3 - Liste des espèces");
+		 
 		 String commandes = scannerClavier.nextLine();
-
+		 
          switch (commandes) {
 			 case "1" :
-				 System.out.println("Liste des pokemons");
 				 System.out.println(pokemonPlante);
 				 System.out.println(pokemonPlante.getUniqueID().hashCode());
 
@@ -129,14 +132,12 @@ public class Main {
 				 break;
 
 			 case "2" :
-				 System.out.println("Liste des attaques");
 				 System.out.println(aireDEau);
 				 System.out.println(acideMalique);
 				 System.out.println(acrobatie);
 				 System.out.println(appelAttaque);
 				 break;
 			 case "3" :
-				 System.out.println("Liste des espèces");
 				 System.out.println(saquedeneu);
 				 System.out.println(airmure);
 				 System.out.println(maskadra);
@@ -148,30 +149,40 @@ public class Main {
          }
      	System.out.println("Bienvenue dans le monde de Pokémon");
 		listActiviter();
-		int po = scannerClavier.nextInt();	
-		switch (po) {
-		case 1:
-			//listPokemon(listPokemon);
-			break;
-		case 2:
-		//	combat();
-			break;
-		case 3:
-			//discussion(listPokemon);
-			break;
-		case 4:
-		//	promenade(listPokemon);
-			break;
-		default:
-			break;
-		}
-
+		int po = scannerClavier.nextInt();
+		do {
+			
+			switch (po) {
+				case 1:
+		//			listPokemon(listPokemon);
+					break;
+				case 2:
+				//	combat();
+					break;
+				case 3:
+					//discussion(listPokemon);
+					break;
+				case 4:
+					promenades.promenades();
+					break;
+				default:
+					if(po == 0) {
+						System.out.println("Vous avez quittez le monde des Pokemons");
+						break;
+					}else {
+						System.out.println("Merci de rentrer un choix valide.");
+					}
+					break;
+				}
+			System.out.println("Voulez-vous faire un autre choix ? Sinon tapez 0 pour quitter.");
+			po = scannerClavier.nextInt();
+		}while(po != 0);
 		scannerClavier.close();
 
      }
 	 
 		public static void listActiviter() {
-			System.out.println("Tu peux choisir entre ces trois activités.");
+			System.out.println("Tu peux choisir entre ces quatre activités.");
 			String[] arrayChoix = new String[4];
 			arrayChoix[0] = "1 Pokémon";
 			arrayChoix[1] = "2 Combat";
