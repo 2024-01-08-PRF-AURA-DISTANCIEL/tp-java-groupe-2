@@ -101,28 +101,9 @@ Un Pokémon ne peut pas parler plus d'une fois.
 			// to print the elements in the list
 			System.out.println(pokemons.get(i));
 		}
-		Random rndm = new Random();
-		// creating object
-		Pokemon rndmElem = pokemons.get(rndm.nextInt(pokemons.size()));
-		System.out.println("Selection  d'un element random à partir de la liste : " + rndmElem);
 
-		//Faire parler un pokemon pour cela
-		/*exple :  pokemons.getNom() + (ce qu'il dit)
-		* ce qu'il dit : phrase(chainedecaractere) (pokemon+getEspeceDePokemon() (1 à 3 fois en random) +
-		*  point (randomly) /ou point d'exclamation (randomly)/ou point d'interrogation (randomly)
-		* */
-
-		/*Random r = new Random();
-		int nbr1 = 1;
-		int nbr2 = 3;
-		int resultat = r.nextInt(nbr2-nbr1) + nbr1;*/
-		extracted();
-
-		System.out.println("On affiche de manière aléatoire le nom d'un pokemon : ");
-		for(int i = 0; i < 5; i++ ) {
-
-			System.out.println("Je m'appelle " + rndmElem.getNom() + " j'appartiens à l'espèce " + rndmElem.getEspecePokemon().getNomEspece() );
-		}
+		System.out.println("Initier une discussion avec un pokemon");
+		discussion(pokemons);
 
 		//L'utilisateur choisit des commandes
 		/*
@@ -131,6 +112,7 @@ Un Pokémon ne peut pas parler plus d'une fois.
 		 * 3- La liste des espèces
 		 * je dois combiner le switch avec un while si possible
 		 * */
+		/*
 		 System.out.println("Veuillez choisir une commande");
 		 System.out.println("1 - Liste des pokemons");
 		 System.out.println("2 - Liste des attaques");
@@ -149,7 +131,7 @@ Un Pokémon ne peut pas parler plus d'une fois.
 				System.out.println(pokemonEAU);
 				System.out.println(pokemonEAU.getUniqueID());
 				System.out.println(pokemonInsecte);
-				System.out.println(pokemonInsecte.getUniqueID());*/
+				System.out.println(pokemonInsecte.getUniqueID());
 				break;
 
 			case "2":
@@ -161,7 +143,7 @@ Un Pokémon ne peut pas parler plus d'une fois.
 				/*System.out.println(aireDEau);
 				System.out.println(acideMalique);
 				System.out.println(acrobatie);
-				System.out.println(appelAttaque);*/
+				System.out.println(appelAttaque);
 				break;
 			case "3":
 				System.out.println("Liste des espèces");
@@ -169,26 +151,26 @@ Un Pokémon ne peut pas parler plus d'une fois.
 				/*System.out.println(saquedeneu);
 				System.out.println(airmure);
 				System.out.println(maskadra);
-				System.out.println(tortank);*/
+				System.out.println(tortank);
 				break;
 
 			default:
 				System.out.println("Choix incorrect");
-		}
+		}*/
 
-		
-		//Interface d'utilisation 
+
+		//Interface d'utilisation
 		/*
 		 * Lance la fonction d'affiche pour l'utilisateur avec un switch
 		 * permet de continuer le programme en fonction du choix de l'utilisateur
 		 *
 		 * */
-		
+
      	System.out.println("Bienvenue dans le monde de Pokémon");
 		listActiviter();
 		int po = scannerClavier.nextInt();
 		do {
-			
+
 			switch (po) {
 				case 1:
 		//			listPokemon(listPokemon);
@@ -217,13 +199,41 @@ Un Pokémon ne peut pas parler plus d'une fois.
 		scannerClavier.close();
  }
 
-	public static void extracted() {
+	/**
+	 * Méthode qui permet de faire discuter des pokémons entre eux
+	 * @param pokemons
+	 */
+	public static void discussion(List<Pokemon> pokemons) {
+		Random rndm = new Random();
+
+
+		Pokemon rndmElem = pokemons.get(rndm.nextInt(pokemons.size()));
+		System.out.println("Selection  d'un element random à partir de la liste : " + rndmElem);
+
+		//Faire parler un pokemon pour cela
+		/*exple :  pokemons.getNom() + (ce qu'il dit)
+		* ce qu'il dit : phrase(chainedecaractere) (pokemon+getEspeceDePokemon() (1 à 3 fois en random) +
+		*  point (randomly) /ou point d'exclamation (randomly)/ou point d'interrogation (randomly)
+		* */
+
+		/*Random r = new Random();
+		int nbr1 = 1;
+		int nbr2 = 3;
+		int resultat = r.nextInt(nbr2-nbr1) + nbr1;*/
+
+		System.out.println("On affiche de manière aléatoire le nom d'un pokemon : ");
+		for(int i = 0; i < 5; i++ ) {
+			System.out.println("Je m'appelle " + rndmElem.getNom() + " j'appartiens à l'espèce " + rndmElem.getEspecePokemon().getNomEspece() + ponctuationAleatoire());
+		}
+	}
+
+	public static String ponctuationAleatoire() {
 		String[] point = {".", "!", "?"};
 
 		Random r = new Random();
 
 		int i1 =   r.nextInt(point.length);
-		System.out.println("affiche : " + point[i1]);
+		return point[i1] ;
 	}
 
 	//Fonction qui permet d'afficher les choix pour l'utilisateur 
