@@ -70,11 +70,18 @@ public class Main {
 		Pokemon pokemonAire = new Pokemon("Mélofée", 100, saquedeneu);
 		Pokemon pokemonEAU = new Pokemon("Raichu", 100, airmure);
 		Pokemon pokemonInsecte = new Pokemon("Carapuce", 100, tortank);
+		Pokemon pokemonEAU2 = new Pokemon("Psykokwak",100,maskadra);
+		Pokemon pokemonPlante2 = new Pokemon("Empiflor", 100, tortank);
+		Pokemon pokemonAire2 = new Pokemon("Ptéra", 100, airmure);
+
 
 		pokemons.add(pokemonPlante);
 		pokemons.add(pokemonAire);
 		pokemons.add(pokemonEAU);
 		pokemons.add(pokemonInsecte);
+		pokemons.add(pokemonEAU2);
+		pokemons.add(pokemonPlante2);
+		pokemons.add(pokemonAire2);
 
 		/*
 	Discussion
@@ -210,10 +217,10 @@ Un Pokémon ne peut pas parler plus d'une fois.
 	 * @param pokemons
 	 */
 	public static void discussion(List<Pokemon> pokemons) {
-		Random rndm = new Random();
+		/*Random rndm = new Random();
 
 		Pokemon rndmElem = pokemons.get(rndm.nextInt(pokemons.size()));
-		System.out.println("Selection  d'un element random à partir de la liste : " + rndmElem);
+		System.out.println("Selection  d'un element random à partir de la liste : " + rndmElem);*/
 
 		//Faire parler un pokemon pour cela
 		/*exple :  pokemons.getNom() + (ce qu'il dit)
@@ -227,9 +234,19 @@ Un Pokémon ne peut pas parler plus d'une fois.
 		int resultat = r.nextInt(nbr2-nbr1) + nbr1;*/
 
 		System.out.println("On affiche de manière aléatoire le nom d'un pokemon : ");
-		for(int i = 0; i < 5; i++ ) {
-			System.out.println("Je m'appelle " + rndmElem.getNom() + " j'appartiens à l'espèce " + rndmElem.getEspecePokemon().getNomEspece() + ponctuationAleatoire());
+		for(int i = 0; i <= 5; i++ ) {
+			String pokemonQuiAParler = pokemons.get(i).getNom();
+			//System.out.println("J'ai parlé : " + pokemonQuiAParler);
+			Random rndm = new Random();
+			Pokemon rndmElem = pokemons.get(rndm.nextInt(pokemons.size()));
+
+			System.out.println("Selection  d'un element random à partir de la liste : " + rndmElem);
+
+			if(!pokemonQuiAParler.equals(rndmElem.getNom())){
+				System.out.println("Je m'appelle " + pokemonQuiAParler + " j'appartiens à l'espèce " + rndmElem.getEspecePokemon().getNomEspece() + ponctuationAleatoire());
 		}
+		}
+
 	}
 
 	public static String ponctuationAleatoire() {

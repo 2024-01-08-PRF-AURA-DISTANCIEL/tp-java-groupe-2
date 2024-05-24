@@ -13,10 +13,10 @@ public class Arene {
 
 	public void agitAuDebutDuCombat(Pokemon pokemon1, Pokemon pokemon2) {
 		switch(this.typeArene){
-			case VOLCAN -> {
-				pokemon1.perdPointDeVie(5);
+			case VOLCAN :
+				//pokemon1.perdPointDeVie(5);
 
-			}
+
 
 		}
 	}
