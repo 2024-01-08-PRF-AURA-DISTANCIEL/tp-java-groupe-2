@@ -23,8 +23,9 @@ public class Arene {
 			break;
 		case VOLCAN:
 			pokemon1.setPointDeVie(pokemon1.getPointDeVie()-5);
-			System.out.println("Le pokemon "+pokemon1.getNom());
+			System.out.println("Le pokemon "+pokemon1.getNom()+" à perdu 5 points de vie");
 			pokemon2.setPointDeVie(pokemon2.getPointDeVie()-5);
+			System.out.println("Le pokemon "+pokemon2.getNom()+" à perdu 5 points de vie");
 			break;
 		case MARAIS:
 			
@@ -47,7 +48,10 @@ public class Arene {
 
             break;
         case MARAIS:
-
+        	pokemon1.setPointDeVie(pokemon1.getPointDeVie()-1);
+            System.out.println("Le pokemon "+pokemon1.getNom()+" à perdu 1 points de vie");
+            pokemon2.setPointDeVie(pokemon2.getPointDeVie()-1);
+            System.out.println("Le pokemon "+pokemon1.getNom()+" à perdu 1 points de vie");
             break;
         default:
 
